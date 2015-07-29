@@ -13,7 +13,8 @@ Trigger the workflow with `seo`. The workflow checks the frontmost application a
 - [Ahrefs](https://ahrefs.com/) Site Explorer Overview: `https://ahrefs.com/site-explorer/overview/subdomains?target=domain.tld`
 
 ### Adding More SEO Tools
-SEO tool URLs are listed in the `seoTools` variable at the top of the AppleScript in the workflow folder. You can easily add or remove URLs. You can also change URL parameters to specifically check one market or use a different language. Please make sure that the domain you're checking is always the final parameter.
+SEO tool URLs are listed in the `seoTools` variable at the top of the AppleScript in the workflow folder.  
+You can easily add or remove URLs. You can also change URL parameters to specifically check one market or use a different language. Please make sure that the domain you're checking is always the final parameter.
 
 ### Turning off Notifications
 You can turn off all notifications by removing or disconnecting the **Post Notification** object in the Alfred workflow window. If you only want to receive specific notifications, disable the unwanted ones by commenting them out in the AppleScript.
