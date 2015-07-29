@@ -24,7 +24,7 @@ Define the “toolURL" variable at the top of the script:
 `property toolURL : "http://toolurlgoeshere"`
 
 ## Download
-[SEO Bookmarklets Workflow for Alfred](#)
+[SEO Bookmarklets Workflow for Alfred](https://github.com/alexanderhuth/alfred-seo-bookmarklets-workflow/raw/master/seoBookmarklets.alfredworkflow)
 
 ## Version History
 ### 1.0.0 – July 29, 2015
