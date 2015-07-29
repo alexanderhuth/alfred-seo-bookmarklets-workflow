@@ -14,12 +14,14 @@ The workflow checks the frontmost application and if it’s a supported browser,
 - [Ahrefs](https://ahrefs.com/) Site Explorer Overview: `https://ahrefs.com/site-explorer/overview/subdomains?target=domain.tld`
 
 ### Adding More SEO Tools
-You can expand this workflow by adding one new line per SEO tool: `open location toolURL & checkURL`.
+You can expand this workflow by adding one new line per SEO tool:
+`open location toolURL & checkURL`.
 
 You can "deactivate" specific SEO tools by commenting them out:
 `-- open location toolURL & checkURL` or by deleting that specific line.
 
-Define the “toolURL" variable at the top of the script: `property toolURL : "http://toolurlgoeshere"`
+Define the “toolURL" variable at the top of the script:
+`property toolURL : "http://toolurlgoeshere"`
 
 ## Download
 [SEO Bookmarklets Workflow for Alfred](#)
@@ -41,4 +43,5 @@ Define the “toolURL" variable at the top of the script: `property toolURL : "h
 
 ## Credits
 Icon made made by [Freepik](http://www.flaticon.com/authors/freepik)  from [www.flaticon.com](http://www.flaticon.com), licensed by [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).
+
 Thanks to [Nathan Münnich](http://www.nathanmuennich.com) for the idea!
