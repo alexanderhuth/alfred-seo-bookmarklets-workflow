@@ -8,9 +8,9 @@ To install the workflow, download `seoBookmarklets.alfredworkflow` and double-cl
 Trigger the workflow with `seo`. The workflow checks the frontmost application and if it’s a supported browser, the script opens the currently active URL in your SEO tools.
 
 ### Currently Supported SEO Tools/Bookmarklets
-- [Sistrix](http://www.sistrix.com/) Domain Overview: `http://uk.sistrix.com/domain.tld`
-- [Searchmetrics](http://www.searchmetrics.com/) SEO Research Overview: `http://suite.searchmetrics.com/en/research/domains/organic?url=domain.tld`
-- [Ahrefs](https://ahrefs.com/) Site Explorer Overview: `https://ahrefs.com/site-explorer/overview/subdomains?target=domain.tld`
+- [Sistrix](http://www.sistrix.com/) Domain Overview
+- [Searchmetrics](http://www.searchmetrics.com/) SEO Research Overview
+- [Ahrefs](https://ahrefs.com/) Site Explorer Overview
 
 ### Adding More SEO Tools
 SEO tool URLs are listed in the `seoTools` variable at the top of the AppleScript in the workflow folder: `set seoTools to {"https://uk.sistrix.com/", "https://ahrefs.com/site-explorer/overview/subdomains?target=", "http://suite.searchmetrics.com/en/research/domains/organic?url="}`
