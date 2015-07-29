@@ -42,5 +42,5 @@ Define the “toolURL" variable at the top of the script:
 - Support URLs in clipboard
 
 ## Credits
-Icon made made by [Freepik](http://www.flaticon.com/authors/freepik) from [www.flaticon.com](http://www.flaticon.com), licensed by [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).  
+[Icon](http://www.flaticon.com/free-icon/browser_14575) made made by [Freepik](http://www.flaticon.com/authors/freepik) from [www.flaticon.com](http://www.flaticon.com), licensed by [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).  
 Thanks to [Nathan Münnich](http://www.nathanmuennich.com) for the idea!
