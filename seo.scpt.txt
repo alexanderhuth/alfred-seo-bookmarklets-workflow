@@ -1,5 +1,4 @@
-property sistrixURL : "https://de.sistrix.com/"
-property ahrefsURL : "https://ahrefs.com/site-explorer/overview/subdomains?target="
+set seoTools to {"https://uk.sistrix.com/", "https://ahrefs.com/site-explorer/overview/subdomains?target=", "http://suite.searchmetrics.com/en/research/domains/organic?url="}
 
 tell application "System Events"
 	set frontApp to displayed name of first process whose frontmost is true
@@ -7,42 +6,62 @@ end tell
 
 if frontApp is "Chromium" then
 	tell application "Chromium"
-		set checkURL to execute active tab of front window javascript "window.location.host"
+		set currentChromiumURL to URL of active tab of front window
 		
-		tell active tab of front window
-			open location sistrixURL & checkURL
-			open location ahrefsURL & checkURL
-		end tell
+		if currentChromiumURL contains "http" then
+			set checkURL to execute active tab of front window javascript "window.location.host"
+			
+			repeat with toolURL in seoTools
+				open location toolURL & checkURL
+			end repeat
+			
+			return "Opened in SEO tools:" & return & checkURL
+			
+		else
+			return "Problem: Can't analyze an empty tab"
+			
+		end if
 	end tell
 	
 else if frontApp is "Safari" then
 	tell application "Safari"
 		set currentSafariURL to URL of current tab of front window
+		
 		if currentSafariURL contains "http" then
 			set checkURL to do JavaScript "window.location.host" in current tab of front window
 			
-			tell current tab of front window
-				open location sistrixURL & checkURL
-				open location ahrefsURL & checkURL
-			end tell
+			repeat with toolURL in seoTools
+				open location toolURL & checkURL
+			end repeat
+			
+			return "Opened in SEO tools:" & return & checkURL
 			
 		else
-			return "Can't analyze an empty tab."
+			return "Problem: Can't analyze an empty tab"
 			
 		end if
 	end tell
 	
 else if frontApp is "Google Chrome" then
 	tell application "Google Chrome"
-		set checkURL to execute active tab of front window javascript "window.location.host"
+		set currentChromeURL to URL of active tab of front window
 		
-		tell active tab of front window
-			open location sistrixURL & checkURL
-			open location ahrefsURL & checkURL
-		end tell
+		if currentChromeURL contains "http" then
+			set checkURL to execute active tab of front window javascript "window.location.host"
+			
+			repeat with toolURL in seoTools
+				open location toolURL & checkURL
+			end repeat
+			
+			return "Opened in SEO tools:" & return & checkURL
+			
+		else
+			return "Problem: Can't analyze an empty tab"
+			
+		end if
 	end tell
 	
 else
-	return "No supported browser is currently open."
+	return "Problem: No supported browser is currently open or active"
 	
 end if

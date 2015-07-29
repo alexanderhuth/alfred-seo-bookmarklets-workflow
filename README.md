@@ -5,29 +5,33 @@ This [Alfred](http://www.alfredapp.com) workflow opens a website in browser-base
 To install the workflow, download `seoBookmarklets.alfredworkflow` and double-click.
 
 ## How to Use It
-Trigger the workflow with `seo`.
+Trigger the workflow with `seo`. The workflow checks the frontmost application and if it’s a supported browser, the script opens the currently active URL in your SEO tools.
 
-The workflow checks the frontmost application and if it’s a supported browser, the script opens the currently active URL in your SEO tools.
-
-## Currently Supported SEO Tools/Bookmarklets
-- [Sistrix](http://www.sistrix.com) Domain Overview: `http://de.sistrix.com/domain.tld`
+### Currently Supported SEO Tools/Bookmarklets
+- [Sistrix](http://www.sistrix.com/) Domain Overview: `http://uk.sistrix.com/domain.tld`
+- [Searchmetrics](http://www.searchmetrics.com/) SEO Research Overview: `http://suite.searchmetrics.com/en/research/domains/organic?url=domain.tld`
 - [Ahrefs](https://ahrefs.com/) Site Explorer Overview: `https://ahrefs.com/site-explorer/overview/subdomains?target=domain.tld`
 
 ### Adding More SEO Tools
-You can expand this workflow by adding one new line per SEO tool:  
-`open location toolURL & checkURL`.
+SEO tool URLs are listed in the `seoTools` variable at the top of the AppleScript in the workflow folder. You can easily add or remove URLs.
 
-You can "deactivate" specific SEO tools by commenting them out:  
-`-- open location toolURL & checkURL` or by deleting that specific line.
-
-Define the “toolURL" variable at the top of the script:  
-`property toolURL : "http://toolurlgoeshere"`
+### Turning off Notifications
+You can turn off all notifications by removing or disconnecting the **Post Notification** object in the Alfred workflow window. If you only want to receive specific notifications, disable the unwanted ones by commenting them out in the AppleScript.
 
 ## Download
 [SEO Bookmarklets Workflow for Alfred](https://github.com/alexanderhuth/alfred-seo-bookmarklets-workflow/raw/master/seoBookmarklets.alfredworkflow)
 
 ## Version History
-### 1.0.0 – July 29, 2015
+### 1.5 – July 29, 2015
+- Added Searchmetrics
+- Easier enabling/adding and disabling of tools
+	- List/group tool URLs as items of one variable
+	- Use `repeat` to loop through SEO tools
+- Notifications using Notification Center
+- Don't open SEO tools for empty Chromium and Google Chrome tabs
+- Code cleanup
+
+### 1.0 – July 28, 2015
 - Initial release
 - Supports Safari, Google Chrome & Chromium
 - Opens URL of currently active browser tab in Sistrix and Ahrefs
@@ -36,8 +40,6 @@ Define the “toolURL" variable at the top of the script:
 
 ### Roadmap
 - Support more SEO tools/bookmarklets
-- Easier enabling/adding and disabling of tools
-- Warnings using Grunt/Notification Center
 - Optional arguments to specifically trigger tools
 - Support URLs in clipboard
 
