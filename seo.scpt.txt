@@ -1,0 +1,48 @@
+property sistrixURL : "https://de.sistrix.com/"
+property ahrefsURL : "https://ahrefs.com/site-explorer/overview/subdomains?target="
+
+tell application "System Events"
+	set frontApp to displayed name of first process whose frontmost is true
+end tell
+
+if frontApp is "Chromium" then
+	tell application "Chromium"
+		set checkURL to execute active tab of front window javascript "window.location.host"
+		
+		tell active tab of front window
+			open location sistrixURL & checkURL
+			open location ahrefsURL & checkURL
+		end tell
+	end tell
+	
+else if frontApp is "Safari" then
+	tell application "Safari"
+		set currentSafariURL to URL of current tab of front window
+		if currentSafariURL contains "http" then
+			set checkURL to do JavaScript "window.location.host" in current tab of front window
+			
+			tell current tab of front window
+				open location sistrixURL & checkURL
+				open location ahrefsURL & checkURL
+			end tell
+			
+		else
+			return "Can't analyze an empty tab."
+			
+		end if
+	end tell
+	
+else if frontApp is "Google Chrome" then
+	tell application "Google Chrome"
+		set checkURL to execute active tab of front window javascript "window.location.host"
+		
+		tell active tab of front window
+			open location sistrixURL & checkURL
+			open location ahrefsURL & checkURL
+		end tell
+	end tell
+	
+else
+	return "No supported browser is currently open."
+	
+end if

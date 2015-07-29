@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>ah.alfred.seobookmarklets</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>6E4EEBD5-0AB8-4986-8EC0-1CD707F41689</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AB677399-9298-4B30-A28A-DF50CEEB2037</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Alexander Huth</string>
+	<key>description</key>
+	<string>An Alfred workflow to open a URL in browser-based SEO tools.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>SEO Bookmarklets</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>seo</string>
+				<key>text</key>
+				<string>Open Active URL in SEO Tools</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>6E4EEBD5-0AB8-4986-8EC0-1CD707F41689</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>osascript seo.scpt</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>AB677399-9298-4B30-A28A-DF50CEEB2037</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>This Alfred workflow opens a website in browser-based SEO tools – much like your JavaScript-bookmarklets, but with less clicks.
+
+The workflow checks the frontmost application. If it’s a browser (supported: Safari, Google Chrome, Chromium), the script opens the active URL in your SEO tools.
+
+Workflow on Github: https://github.com/alexanderhuth/alfred-seo-bookmarklets-workflow</string>
+	<key>uidata</key>
+	<dict>
+		<key>6E4EEBD5-0AB8-4986-8EC0-1CD707F41689</key>
+		<dict>
+			<key>ypos</key>
+			<real>120</real>
+		</dict>
+		<key>AB677399-9298-4B30-A28A-DF50CEEB2037</key>
+		<dict>
+			<key>ypos</key>
+			<real>120</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://alexanderhuth.de</string>
+</dict>
+</plist>
