@@ -11,7 +11,7 @@ Trigger the workflow with `seo`. The workflow checks the frontmost application a
 - [Sistrix](http://www.sistrix.com/) Domain Overview
 - [Searchmetrics](http://www.searchmetrics.com/) SEO Research Overview
 - [Ahrefs](https://ahrefs.com/) Site Explorer Overview
-- [Simirlarweb](http://www.similarweb.com/) Domain Overview
+- [Similarweb](http://www.similarweb.com/) Domain Overview
 - Indexed Pages in Google
 - Links from Domain in Bing
 
