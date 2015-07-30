@@ -11,6 +11,9 @@ Trigger the workflow with `seo`. The workflow checks the frontmost application a
 - [Sistrix](http://www.sistrix.com/) Domain Overview
 - [Searchmetrics](http://www.searchmetrics.com/) SEO Research Overview
 - [Ahrefs](https://ahrefs.com/) Site Explorer Overview
+- [Simirlarweb](http://www.similarweb.com/) Domain Overview
+- Indexed Pages in Google
+- Links from Domain in Bing
 
 ### Adding More SEO Tools
 SEO tool URLs are listed in the `seoTools` variable at the top of the AppleScript in the workflow folder: `set seoTools to {"URL", "URL", "URL"}`.
@@ -20,12 +23,18 @@ You can easily add or remove URLs. You can also change URL parameters to specifi
 Don't know what to add? Check out [this list from Moz](https://moz.com/blog/30-seo-bookmarklets-to-save-you-time) to get some inspiration.
 
 ### Turning off Notifications
-You can turn off all notifications by removing or disconnecting the **Post Notification** object in the Alfred workflow window. If you only want to receive specific notifications, disable the unwanted ones by commenting them out in the AppleScript.
+You can turn off all notifications by removing or disconnecting the **Post Notification** object in the Alfred workflow window. If you only want to receive specific notifications, enable/disable them by commenting them out in the AppleScript.
 
 ## Download
 [SEO Bookmarklets Workflow for Alfred](https://github.com/alexanderhuth/alfred-seo-bookmarklets-workflow/raw/master/seoBookmarklets.alfredworkflow)
 
 ## Version History
+### 1.5.1 – July 30, 2015
+- New SEO tool URLs: Similarweb, Indexed Pages (Google), Links from Domain (Bing)
+- Disable notifications when opening tabs successfully
+- Use `document.domain.replace('www.','')` instead of
+`window.location.hostname`
+
 ### 1.5 – July 29, 2015
 - Added Searchmetrics
 - Easier enabling/adding and disabling of tools
