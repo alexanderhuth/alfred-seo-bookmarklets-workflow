@@ -19,6 +19,17 @@
 				<string></string>
 			</dict>
 		</array>
+		<key>AB677399-9298-4B30-A28A-DF50CEEB2037</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2A59F346-ACF7-430F-B3E6-7772B5CEC259</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Alexander Huth</string>
@@ -68,6 +79,31 @@
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<true/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<true/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>SEO Bookmarklets</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>2A59F346-ACF7-430F-B3E6-7772B5CEC259</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>This Alfred workflow opens a website in browser-based SEO tools – much like your JavaScript-bookmarklets, but with less clicks.
@@ -77,6 +113,11 @@ The workflow checks the frontmost application. If it’s a browser (supported: S
 Workflow on Github: https://github.com/alexanderhuth/alfred-seo-bookmarklets-workflow</string>
 	<key>uidata</key>
 	<dict>
+		<key>2A59F346-ACF7-430F-B3E6-7772B5CEC259</key>
+		<dict>
+			<key>ypos</key>
+			<real>120</real>
+		</dict>
 		<key>6E4EEBD5-0AB8-4986-8EC0-1CD707F41689</key>
 		<dict>
 			<key>ypos</key>

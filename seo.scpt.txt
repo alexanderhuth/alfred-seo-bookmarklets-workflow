@@ -1,4 +1,4 @@
-set seoTools to {"https://uk.sistrix.com/", "https://ahrefs.com/site-explorer/overview/subdomains?target=", "http://suite.searchmetrics.com/en/research/domains/organic?url="}
+set seoTools to {"https://uk.sistrix.com/", "https://ahrefs.com/site-explorer/overview/subdomains?target=", "http://suite.searchmetrics.com/en/research/domains/organic?url=", "http://www.similarweb.com/website/", "http://www.bing.com/search?q=linkfromdomain%3A", "http://www.google.com/search?q=site%3A"}
 
 tell application "System Events"
 	set frontApp to displayed name of first process whose frontmost is true
@@ -9,13 +9,15 @@ if frontApp is "Chromium" then
 		set currentChromiumURL to URL of active tab of front window
 		
 		if currentChromiumURL contains "http" then
-			set checkURL to execute active tab of front window javascript "window.location.host"
+			set checkURL to execute active tab of front window javascript "document.domain.replace('www.','')"
+			set returnURL to execute active tab of front window javascript "window.location.hostname"
 			
 			repeat with toolURL in seoTools
 				open location toolURL & checkURL
 			end repeat
 			
-			return "Opened in SEO tools:" & return & checkURL
+			# Enable the following line to post notifications
+			--return "Opened in SEO tools:" & return & returnURL
 			
 		else
 			return "Problem: Can't analyze an empty tab"
@@ -28,13 +30,15 @@ else if frontApp is "Safari" then
 		set currentSafariURL to URL of current tab of front window
 		
 		if currentSafariURL contains "http" then
-			set checkURL to do JavaScript "window.location.host" in current tab of front window
+			set checkURL to do JavaScript "document.domain.replace('www.','')" in current tab of front window
+			set returnURL to do JavaScript "window.location.hostname" in current tab of front window
 			
 			repeat with toolURL in seoTools
 				open location toolURL & checkURL
 			end repeat
 			
-			return "Opened in SEO tools:" & return & checkURL
+			# Enable the following line to post notifications
+			--return "Opened in SEO tools:" & return & returnURL
 			
 		else
 			return "Problem: Can't analyze an empty tab"
@@ -47,13 +51,15 @@ else if frontApp is "Google Chrome" then
 		set currentChromeURL to URL of active tab of front window
 		
 		if currentChromeURL contains "http" then
-			set checkURL to execute active tab of front window javascript "window.location.host"
+			set checkURL to execute active tab of front window javascript "document.domain.replace('www.','')"
+			set returnURL to execute active tab of front window javascript "window.location.hostname"
 			
 			repeat with toolURL in seoTools
 				open location toolURL & checkURL
 			end repeat
 			
-			return "Opened in SEO tools:" & return & checkURL
+			# Enable the following line to post notifications
+			--return "Opened in SEO tools:" & return & returnURL
 			
 		else
 			return "Problem: Can't analyze an empty tab"
