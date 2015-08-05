@@ -26,7 +26,7 @@ Don't know what to add? Check out [this list from Moz](https://moz.com/blog/30-s
 You can turn off all notifications by removing or disconnecting the **Post Notification** object in the Alfred workflow window. If you only want to receive specific notifications, enable/disable them by commenting them out in the AppleScript.
 
 ## Download
-[SEO Bookmarklets Workflow for Alfred](https://github.com/alexanderhuth/alfred-seo-bookmarklets-workflow/raw/master/seoBookmarklets.alfredworkflow)
+[SEO Bookmarklets Workflow for Alfred](https://github.com/alexanderhuth/alfred-seo-bookmarklets-workflow/releases/download/v1.5.1/seoBookmarklets.alfredworkflow)
 
 ## Version History
 ### 1.5.1 – July 30, 2015
